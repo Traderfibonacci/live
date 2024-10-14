@@ -52,7 +52,7 @@ public class ProdutoController {
         Produto produto = produtoService.saveOrUpdate(requestDto.toModel());
 
         ProdutoResponseDto responseDto = new ProdutoResponseDto().toDto(produto);
-        return ResponseEntity.accepted().body(responseDto);
+        return ResponseEntity.ok().body(responseDto);
     }
 
     @PutMapping("{id}")
